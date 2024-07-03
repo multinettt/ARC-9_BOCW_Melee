@@ -1,16 +1,16 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models\weapons\arc9\bocw\bocw_ffar1\bodyfront_diff"
-	"$bumpmap" "models\weapons\arc9\bocw\bocw_ffar1\bodyfront_n"
+	"$basetexture" "models\weapons\arc9\bocw\bocw_knife\knife_diff"
+	"$bumpmap" "models\weapons\arc9\bocw\bocw_knife\knife_n"
 
 	"$phong" "1"
-	"$phongexponenttexture" "models\weapons\arc9\bocw\bocw_ffar1\bodyfront_g"
+	"$phongexponenttexture" "models\weapons\arc9\bocw\bocw_knife\knife_g"
 	"$phongboost" "0.2"
 	"$phongalbedotint" "1"
 
 	"$normalmapalphaenvmapmask" "1"
 
-	"$detail" 	"models\weapons\arc9\bocw\bocw_ffar1\bodyfront_sc"
+	"$detail" 	"models\weapons\arc9\bocw\bocw_knife\knife_sc"
 	"$detailscale" "1"
 	"$detailblendfactor" "0.06"     
 	"$detailblendmode" "1"

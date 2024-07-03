@@ -1,6 +1,6 @@
 --=============================================================================
 --   CALL OF DUTY: BLACK OPS COLD WAR
---   Krig 6
+--   Knife
 --   LUA - MAIN
 --=============================================================================
 --[[
@@ -8,18 +8,18 @@
 
 --   BASE  : ARC9
 --   BUILD : v1.0
---   SR.NO : ?
+--   SR.NO : 4003160/3420-T
 
 
-oooo    oooo           o8o                    .ooo   
-`888   .8P'            `"'                  .88'     
- 888  d8'    oooo d8b oooo   .oooooooo     d88'      
- 88888[      `888""8P `888  888' `88b     d888P"Ybo. 
- 888`88b.     888      888  888   888     Y88[   ]88 
- 888  `88b.   888      888  `88bod8P'     `Y88   88P 
-o888o  o888o d888b    o888o `8oooooo.      `88bod8'  
-                            d"     YD                
-                            "Y88888P'                
+
+oooo    oooo              o8o   .o88o.           
+`888   .8P'               `"'   888 `"           
+ 888  d8'    ooo. .oo.   oooo  o888oo   .ooooo.  
+ 88888[      `888P"Y88b  `888   888    d88' `88b 
+ 888`88b.     888   888   888   888    888ooo888 
+ 888  `88b.   888   888   888   888    888    .o 
+o888o  o888o o888o o888o o888o o888o   `Y8bod8P' 
+                                                 
 ]]
 
 AddCSLuaFile()
@@ -29,18 +29,17 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - Black Ops Cold War"
-SWEP.SubCategory = "Assault Rifles"
+SWEP.SubCategory = "Melee"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Krig 6"
-SWEP.TrueName = "Ak 5"
-SWEP.Class = "Assault Rifle"
+SWEP.PrintName = "Knife"
+SWEP.TrueName = "Knife"
+SWEP.Class = "Melee"
 SWEP.Trivia = {
-     Manufacturer = "FN Herstal",
-     Calibre = "5.56x45mm",
-     Mechanism = "Gas Operated, Rotating bolt",
-     Country = "Sweden",
-     Year = 1986
+     Manufacturer = "Unknown",
+     Mechanism = "Mechanics",
+     Country = "Unknown",
+     Year = "Unknown"
 }
 
 SWEP.Credits = {
@@ -48,14 +47,16 @@ SWEP.Credits = {
      --Contact = "https://steamcommunity.com/id/multinett/"
 }
 
-SWEP.Description = [[Full-auto assault rifle. Improved damage and accuracy. Excellent weapon control and visibility when sustaining fire.
+SWEP.Description = [[Lethal melee weapon. Military-issue combat knife with a straight-edge blade that kills enemies with a single deadly strike. Trusted by the U.S. Military since the early 40's.
 
-The Krig 6 is an assault rifle featured in Call of Duty: Black Ops Cold War and Call of Duty: Mobile.]]
+The Knife is the standard close quarters combat (CQC) melee weapon in every main game since Call of Duty 4: Modern Warfare, and also appearing in Call of Duty 3, Call of Duty: Modern Warfare: Mobilized, Modern Warfare 2: Ghost, Call of Duty: Black Ops (Nintendo DS), Find Makarov, Find Makarov: Operation Kingfish, Call of Duty: Modern Warfare 3: Defiance, Call of Duty: Black Ops: Declassified, Call of Duty Online and Call of Duty: Mobile.
+
+The Knife returns in Call of Duty: Black Ops Cold War where it once more has been changed to be a separate Melee Weapon.]]
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_arc9_krig6_bocw.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_arc9_krig6_bocw.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_arc9_knife_bocw.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_arc9_knife_bocw.mdl"
 
 SWEP.Slot = 2
 
@@ -130,12 +131,12 @@ SWEP.TracerSize = 0.5
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "ar2" -- What ammo type this gun uses.
+SWEP.Ammo = "" -- What ammo type this gun uses.
 
-SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 30 -- Self-explanatory.
-SWEP.SupplyLimit = 2 -- Amount of magazines of ammo this gun can take from an ARC-9 supply crate.
-SWEP.SecondarySupplyLimit = 2 -- Amount of reserve UBGL magazines you can take.
+SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
+SWEP.ClipSize = -1 -- Self-explanatory.
+SWEP.SupplyLimit = 0 -- Amount of magazines of ammo this gun can take from an ARC-9 supply crate.
+SWEP.SecondarySupplyLimit = 0 -- Amount of reserve UBGL magazines you can take.
 
 SWEP.ForceDefaultClip = nil -- Set to force a default amount of ammo this gun can have. Otherwise, this is controlled by console variables.
 
@@ -151,7 +152,7 @@ SWEP.CanFireUnderwater = false -- This weapon can shoot while underwater.
 SWEP.ShouldDropMag = false
 SWEP.ShouldDropMagEmpty = false
 
-SWEP.DropMagazineModel = "models/weapons/arc9/atts/bocw_krig6_magazine.mdl" -- Set to a string or table to drop this magazine when reloading.
+SWEP.DropMagazineModel = "models/weapons/arc9/atts/bocw_knife_magazine.mdl" -- Set to a string or table to drop this magazine when reloading.
 SWEP.DropMagazineSounds = {} -- Table of sounds a dropped magazine should play.
 SWEP.DropMagazineAmount = 1 -- Amount of mags to drop.
 SWEP.DropMagazineSkin = 0 -- Model skin of mag.
@@ -163,7 +164,7 @@ SWEP.DropMagazineVelocity = Vector(0, -100, 0) -- Put something here if your ani
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 652
+--SWEP.RPM = 652
 
 -- Works different to ArcCW
 
@@ -176,10 +177,8 @@ SWEP.RPM = 652
 
 SWEP.Firemodes = {
     {
-        Mode = -1,
-    },
-    {
         Mode = 1,
+        PrintName = "Melee"
     },
 }
 
@@ -223,46 +222,65 @@ SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 SWEP.VisualRecoilPunch = 2
 SWEP.VisualRecoilPunchMultSights = 1
 
-SWEP.NPCWeaponType = "weapon_ar2"
+SWEP.NPCWeaponType = "weapon_crowbar"
 SWEP.NPCWeight = 50
 
 -------------------------- HANDLING
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
-SWEP.Sway = 0.3 -- How much the gun sways.
+SWEP.Sway = 0 -- How much the gun sways.
 
-SWEP.HoldBreathTime = 5 -- time that you can hold breath for
-SWEP.RestoreBreathTime = 4
+SWEP.HoldBreathTime = 0 -- time that you can hold breath for
+SWEP.RestoreBreathTime = 0
 
 SWEP.FreeAimRadiusSights = 0
 
-SWEP.SwayMultSights = 0.5
+SWEP.SwayMultSights = 0
 
-SWEP.AimDownSightsTime = 0.3 -- How long it takes to go from hip fire to aiming down sights.
-SWEP.SprintToFireTime = 0.4 -- How long it takes to go from sprinting to being able to fire.
+SWEP.AimDownSightsTime = 0 -- How long it takes to go from hip fire to aiming down sights.
+SWEP.SprintToFireTime = 0.2 -- How long it takes to go from sprinting to being able to fire.
 
 SWEP.ShootWhileSprint = false
 
 SWEP.Speed = 1
 
 SWEP.SpeedMult = 1
-SWEP.SpeedMultSights = 0.375
-SWEP.SpeedMultShooting = 0.95
-SWEP.SpeedMultMelee = 0.8
+SWEP.SpeedMultSights = 1
+SWEP.SpeedMultShooting = 1
+SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 --SWEP.SpeedMultBlindFire = 1
 
 -------------------------- MELEE
 
 SWEP.Bash = true
-SWEP.PrimaryBash = false
+SWEP.PrimaryBash = true
 
 SWEP.BashDamage = 50
 SWEP.BashLungeRange = 64
 SWEP.BashRange = 64
-SWEP.PreBashTime = 0.18
+SWEP.PreBashTime = 0.5
 SWEP.PostBashTime = 0.5
+SWEP.BashDamageType = DMG_SLASH
 SWEP.BashDecal = "ManhackCut"
+
+SWEP.SecondaryBash = true
+
+SWEP.Bash2Damage = 150
+SWEP.Bash2LungeRange = 64
+SWEP.Bash2Range = 64
+SWEP.PreBash2Time = 0.5
+SWEP.PostBash2Time = 0.5
+SWEP.Bash2DamageType = DMG_CLUB
+SWEP.Bash2Decal = "ManhackCut"
+
+SWEP.Backstab = true
+SWEP.BackstabDamage = 300
+SWEP.BackstabRange = 64
+SWEP.PreBackstabTime = 0.5
+SWEP.PostBackstabTime = 0.5
+SWEP.BackstabDamageType = DMG_CLUB
+SWEP.BackstabDecal = "ManhackCut"
 
 -------------------------- NPC
 
@@ -277,9 +295,9 @@ SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0.05
 
 SWEP.FirstShootSound = nil                      -- First fire
-SWEP.ShootSound = "ARC9_BOCW.Krig6_fire"                            -- Fire
---SWEP.ShootSoundIndoor = "ARC9_BOCW.Krig6_fire_int_decay"                  -- Fire indoors
-SWEP.ShootSoundSilenced = "ARC9_BOCW.Krig6_fire_silenced"                    -- Fire silenced
+SWEP.ShootSound = "ARC9_BOCW.knife_fire"                            -- Fire
+--SWEP.ShootSoundIndoor = "ARC9_BOCW.knife_fire_int_decay"                  -- Fire indoors
+SWEP.ShootSoundSilenced = "ARC9_BOCW.knife_fire_silenced"                    -- Fire silenced
 SWEP.ShootSoundIndoorSilenced = nil             -- Fire indoors silenced
 SWEP.FirstShootSoundSilenced = nil              -- First fire silenced
 SWEP.FirstDistantShootSound = nil               -- First distant fire
@@ -426,12 +444,12 @@ SWEP.BipodAng = Angle(0, 0, 0)
 
 -------------------------- HoldTypes
 
-SWEP.HoldType = "ar2"
-SWEP.HoldTypeSprint = "passive"
-SWEP.HoldTypeHolstered = nil
-SWEP.HoldTypeSights = "smg"
+SWEP.HoldType = "knife"
+SWEP.HoldTypeSprint = "crowbar"
+SWEP.HoldTypeHolstered = "normal"
+SWEP.HoldTypeSights = "knife"
 SWEP.HoldTypeCustomize = "slam"
-SWEP.HoldTypeBlindfire = "pistol"
+SWEP.HoldTypeBlindfire = "knife"
 SWEP.HoldTypeNPC = nil
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
@@ -620,8 +638,8 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_krig6_muzzle"},
-        Installed = "bocw_krig6_muzzle_base",
+        Category = {"bocw_knife_muzzle"},
+        Installed = "bocw_knife_muzzle_base",
     },
     {
         PrintName = "UNDRBARREL",
@@ -630,7 +648,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(20.25, 4.5, -5),
         Category = {"bocw_underbarrel_west"},
-        InstalledElements = {"krig6_foregrip"},
+        InstalledElements = {"knife_foregrip"},
     },
     {
         PrintName = "BODY",
@@ -647,7 +665,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(-7, 0, 0),
-        Category = {"bocw_krig6_barrel"},
+        Category = {"bocw_knife_barrel"},
     },
     {
         PrintName = "STOCK",
@@ -655,7 +673,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_krig6_stock"},
+        Category = {"bocw_knife_stock"},
         InstalledElements = {"stockgone"},
     },
     {
@@ -665,7 +683,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, -2),
-        Category = {"bocw_krig6_mag"},
+        Category = {"bocw_knife_mag"},
     },
     {
         PrintName = "HANDLE",
@@ -673,7 +691,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(-0.5, 0, -0.75),
-        Category = {"bocw_krig6_wrap"},
+        Category = {"bocw_knife_wrap"},
     },
     {
         PrintName = "SOUND",
@@ -681,7 +699,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(30, 0, 3.4),
-        Category = {"bocw_krig6_sound"},
+        Category = {"bocw_knife_sound"},
     },
     {
         PrintName = "Cosmetic",
@@ -714,19 +732,19 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     
     local elements = swep:GetElements()
 
-    if elements["krig6_mag_ext"] then
+    if elements["knife_mag_ext"] then
         return anim .. "_ext"
     end
 
-    if elements["krig6_mag_dual"] then
+    if elements["knife_mag_dual"] then
         return anim .. "_dual"
     end
 
-    if elements["krig6_mag_mix"] then
+    if elements["knife_mag_mix"] then
         return anim .. "_mix"
     end
 
-    if elements["krig6_foregrip"] then
+    if elements["knife_foregrip"] then
         return anim .. "_grip"
     end
 
@@ -782,9 +800,9 @@ SWEP.Animations = {
     ["ready"] = {
         Source = "ready",
         EventTable = {
-            { s = "ARC9_BOCW.Krig6_boltback", t = 0.3 },
-            { s = "ARC9_BOCW.Krig6_boltrelease", t = 0.45 },
-            { s = "ARC9_BOCW.Krig6_reload_end", t = 0.9 },
+            { s = "ARC9_BOCW.knife_boltback", t = 0.3 },
+            { s = "ARC9_BOCW.knife_boltrelease", t = 0.45 },
+            { s = "ARC9_BOCW.knife_reload_end", t = 0.9 },
         },
         IKTimeLine = {
             {
@@ -837,9 +855,9 @@ SWEP.Animations = {
         NoMagSwap = true,
         MinProgress = 0.75,
         EventTable = {
-            { s = "ARC9_BOCW.Krig6_reload_magout", t = 0.35 },
-            { s = "ARC9_BOCW.Krig6_reload_magin", t = 1.35 },
-            { s = "ARC9_BOCW.Krig6_reload_end", t = 1.9 },
+            { s = "ARC9_BOCW.knife_reload_magout", t = 0.35 },
+            { s = "ARC9_BOCW.knife_reload_magin", t = 1.35 },
+            { s = "ARC9_BOCW.knife_reload_end", t = 1.9 },
         },
         IKTimeLine = {
             {
@@ -868,11 +886,11 @@ SWEP.Animations = {
         Source = "reload_empty",
         MinProgress = 0.53,
         EventTable = {
-            { s = "ARC9_BOCW.Krig6_reload_magout", t = 0.375 },
-            { s = "ARC9_BOCW.Krig6_reload_magin", t = 1.3 },
-            { s = "ARC9_BOCW.Krig6_boltback", t = 2.25 },
-            { s = "ARC9_BOCW.Krig6_boltrelease", t = 2.4 },
-            { s = "ARC9_BOCW.Krig6_reload_end", t = 2.9 },
+            { s = "ARC9_BOCW.knife_reload_magout", t = 0.375 },
+            { s = "ARC9_BOCW.knife_reload_magin", t = 1.3 },
+            { s = "ARC9_BOCW.knife_boltback", t = 2.25 },
+            { s = "ARC9_BOCW.knife_boltrelease", t = 2.4 },
+            { s = "ARC9_BOCW.knife_reload_end", t = 2.9 },
             { hide = 1, t = 0.85 },
             { hide = 0, t = 1.05 }
         },
@@ -903,9 +921,9 @@ SWEP.Animations = {
         Source = "reload_ext",
         MinProgress = 0.7,
         EventTable = {
-            { s = "ARC9_BOCW.Krig6_reload_magout", t = 0.35 },
-            { s = "ARC9_BOCW.Krig6_reload_magin", t = 1.45 },
-            { s = "ARC9_BOCW.Krig6_reload_end", t = 2 },
+            { s = "ARC9_BOCW.knife_reload_magout", t = 0.35 },
+            { s = "ARC9_BOCW.knife_reload_magin", t = 1.45 },
+            { s = "ARC9_BOCW.knife_reload_end", t = 2 },
         },
         IKTimeLine = {
             {
@@ -935,11 +953,11 @@ SWEP.Animations = {
         MinProgress = 0.54,
         MagSwapTime = 1,
         EventTable = {
-            { s = "ARC9_BOCW.Krig6_reload_magout", t = 0.4 },
-            { s = "ARC9_BOCW.Krig6_reload_magin", t = 1.45 },
-            { s = "ARC9_BOCW.Krig6_boltback", t = 2.3 },
-            { s = "ARC9_BOCW.Krig6_boltrelease", t = 2.45 },
-            { s = "ARC9_BOCW.Krig6_reload_end", t = 2.9 },
+            { s = "ARC9_BOCW.knife_reload_magout", t = 0.4 },
+            { s = "ARC9_BOCW.knife_reload_magin", t = 1.45 },
+            { s = "ARC9_BOCW.knife_boltback", t = 2.3 },
+            { s = "ARC9_BOCW.knife_boltrelease", t = 2.45 },
+            { s = "ARC9_BOCW.knife_reload_end", t = 2.9 },
             { hide = 1, t = 0.85 },
             { hide = 0, t = 1.05 }
         },
@@ -970,9 +988,9 @@ SWEP.Animations = {
         Source = "reload_dualmag",
         MinProgress = 0.65,
         EventTable = {
-            { s = "ARC9_BOCW.Krig6_reload_magout", t = 0.3 },
-            { s = "ARC9_BOCW.Krig6_reload_magin", t = 1 },
-            { s = "ARC9_BOCW.Krig6_reload_end", t = 1.6 },
+            { s = "ARC9_BOCW.knife_reload_magout", t = 0.3 },
+            { s = "ARC9_BOCW.knife_reload_magin", t = 1 },
+            { s = "ARC9_BOCW.knife_reload_end", t = 1.6 },
         },
         IKTimeLine = {
             {
@@ -1001,10 +1019,10 @@ SWEP.Animations = {
         Source = "reload_dualmag_empty",
         MinProgress = 0.475,
         EventTable = {
-            { s = "ARC9_BOCW.Krig6_reload_magout", t = 0.3 },
-            { s = "ARC9_BOCW.Krig6_reload_magin", t = 1 },
-            { s = "ARC9_BOCW.Krig6_reload_dualmix_boltreleasehit", t = 1.95 },
-            { s = "ARC9_BOCW.Krig6_reload_end", t = 2.4 },
+            { s = "ARC9_BOCW.knife_reload_magout", t = 0.3 },
+            { s = "ARC9_BOCW.knife_reload_magin", t = 1 },
+            { s = "ARC9_BOCW.knife_reload_dualmix_boltreleasehit", t = 1.95 },
+            { s = "ARC9_BOCW.knife_reload_end", t = 2.4 },
         },
         IKTimeLine = {
             {
@@ -1033,9 +1051,9 @@ SWEP.Animations = {
         Source = "reload_dualmag2",
         MinProgress = 0.65,
         EventTable = {
-            { s = "ARC9_BOCW.Krig6_reload_magout", t = 0.3 },
-            { s = "ARC9_BOCW.Krig6_reload_magin", t = 1 },
-            { s = "ARC9_BOCW.Krig6_reload_end", t = 1.6 },
+            { s = "ARC9_BOCW.knife_reload_magout", t = 0.3 },
+            { s = "ARC9_BOCW.knife_reload_magin", t = 1 },
+            { s = "ARC9_BOCW.knife_reload_end", t = 1.6 },
         },
         IKTimeLine = {
             {
@@ -1064,10 +1082,10 @@ SWEP.Animations = {
         Source = "reload_dualmag2_empty",
         MinProgress = 0.475,
         EventTable = {
-            { s = "ARC9_BOCW.Krig6_reload_magout", t = 0.3 },
-            { s = "ARC9_BOCW.Krig6_reload_magin", t = 1 },
-            { s = "ARC9_BOCW.Krig6_reload_dualmix_boltreleasehit", t = 1.9 },
-            { s = "ARC9_BOCW.Krig6_reload_end", t = 2.4 },
+            { s = "ARC9_BOCW.knife_reload_magout", t = 0.3 },
+            { s = "ARC9_BOCW.knife_reload_magin", t = 1 },
+            { s = "ARC9_BOCW.knife_reload_dualmix_boltreleasehit", t = 1.9 },
+            { s = "ARC9_BOCW.knife_reload_end", t = 2.4 },
         },
         IKTimeLine = {
             {
@@ -1096,9 +1114,9 @@ SWEP.Animations = {
         Source = "reload_mix",
         MinProgress = 0.6,
         EventTable = {
-            { s = "ARC9_BOCW.Krig6_reload_magout", t = 0.3 },
-            { s = "ARC9_BOCW.Krig6_reload_magin", t = 1.1 },
-            { s = "ARC9_BOCW.Krig6_reload_end", t = 1.9 },
+            { s = "ARC9_BOCW.knife_reload_magout", t = 0.3 },
+            { s = "ARC9_BOCW.knife_reload_magin", t = 1.1 },
+            { s = "ARC9_BOCW.knife_reload_end", t = 1.9 },
             { hide = 1, t = 0.75 },
             { hide = 0, t = 1 }
         },
@@ -1130,10 +1148,10 @@ SWEP.Animations = {
         MinProgress = 0.5,
         MagSwapTime = 1,
         EventTable = {
-            { s = "ARC9_BOCW.Krig6_reload_magout", t = 0.3 },
-            { s = "ARC9_BOCW.Krig6_reload_magin", t = 1.2 },
-            { s = "ARC9_BOCW.Krig6_reload_dualmix_boltreleasehit", t = 2.2 },
-            { s = "ARC9_BOCW.Krig6_reload_end", t = 2.6 },
+            { s = "ARC9_BOCW.knife_reload_magout", t = 0.3 },
+            { s = "ARC9_BOCW.knife_reload_magin", t = 1.2 },
+            { s = "ARC9_BOCW.knife_reload_dualmix_boltreleasehit", t = 2.2 },
+            { s = "ARC9_BOCW.knife_reload_end", t = 2.6 },
             { hide = 1, t = 0.75 },
             { hide = 0, t = 1 }
         },
@@ -1178,16 +1196,16 @@ SWEP.Animations = {
     ["enter_inspect"] = {
         Source = "inspect",
         EventTable = {
-            { s = "ARC9_BOCW.Krig6_inspect_var", t = 0.1 },
-            { s = "ARC9_BOCW.Krig6_inspect_var", t = 2.1 },
-            { s = "ARC9_BOCW.Krig6_inspect_var", t = 3.6 },
+            { s = "ARC9_BOCW.knife_inspect_var", t = 0.1 },
+            { s = "ARC9_BOCW.knife_inspect_var", t = 2.1 },
+            { s = "ARC9_BOCW.knife_inspect_var", t = 3.6 },
         },
     },
     --[[
     ["1_enter_inspect"] = {
         Source = "inspect_dragon",
         EventTable = {
-            { s = "ARC9_BOCW.Krig6_inspect_dragon", t = 0 },
+            { s = "ARC9_BOCW.knife_inspect_dragon", t = 0 },
         },
         IKTimeLine = {
             {
@@ -1216,9 +1234,9 @@ SWEP.Animations = {
     ["enter_inspect_grip"] = {
         Source = "inspect_grip",
         EventTable = {
-            { s = "ARC9_BOCW.Krig6_inspect_var", t = 0.1 },
-            { s = "ARC9_BOCW.Krig6_inspect_var", t = 2.1 },
-            { s = "ARC9_BOCW.Krig6_inspect_var", t = 3.6 },
+            { s = "ARC9_BOCW.knife_inspect_var", t = 0.1 },
+            { s = "ARC9_BOCW.knife_inspect_var", t = 2.1 },
+            { s = "ARC9_BOCW.knife_inspect_var", t = 3.6 },
         },
         IKTimeLine = {
             {
