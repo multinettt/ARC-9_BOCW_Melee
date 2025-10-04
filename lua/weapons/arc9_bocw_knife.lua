@@ -261,7 +261,7 @@ SWEP.Animations = {
     ["bash2"] = {
         Source = "melee3",
         EventTable = {
-            { s = "ARC9_BOCW.Knife_swing", t = 0.1 },
+            { s = "ARC9_BOCW.Knife_swing", t = 0.05 },
         },
     },
     ["enter_sprint"] = {
