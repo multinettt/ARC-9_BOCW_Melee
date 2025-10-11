@@ -62,13 +62,6 @@ sound.Add({
 })
 
 sound.Add({
-    name = "ARC9_BOCW.Knife_slash",
-    channel = CHAN_AUTO,
-    volume = 1.0,
-    sound = {"weapons/arc9/bocw_knife/knife_slash1.wav", "weapons/arc9/bocw_knife/knife_slash2.wav", "weapons/arc9/bocw_knife/knife_slash3.wav", "weapons/arc9/bocw_knife/knife_slash4.wav"}
-})
-
-sound.Add({
     name = "ARC9_BOCW.Knife_stab",
     channel = CHAN_AUTO,
     volume = 1.0,
