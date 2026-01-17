@@ -68,8 +68,8 @@ SWEP.TPIKforcelefthand = true
 SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.WorldModelOffset = {
-    Pos = Vector(-2, -6, -16),
-    Ang = Angle(90, 0, 0),
+    Pos = Vector(12.5, -6, -14),
+    Ang = Angle(140, 0, 0),
     Scale = 1
 }
 
