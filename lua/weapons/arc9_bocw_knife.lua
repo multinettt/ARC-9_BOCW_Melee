@@ -276,19 +276,19 @@ SWEP.Animations = {
     ["bash"] = {
         Source = "melee1",
         EventTable = {
-            { s = "ARC9_BOCW.Knife_swing", t = 0.1 },
+            { s = "ARC9_BOCW.Shared_Knife_Swing", t = 0.1 },
         },
     },
     ["1_bash"] = {
         Source = "melee2",
         EventTable = {
-            { s = "ARC9_BOCW.Knife_swing", t = 0.1 },
+            { s = "ARC9_BOCW.Shared_Knife_Swing", t = 0.1 },
         },
     },
     ["bash2"] = {
         Source = "melee3",
         EventTable = {
-            { s = "ARC9_BOCW.Knife_swing", t = 0.05 },
+            { s = "ARC9_BOCW.Shared_Knife_Swing", t = 0.05 },
         },
     },
     ["enter_sprint"] = {
@@ -309,7 +309,7 @@ SWEP.Animations = {
     ["enter_inspect"] = {
         Source = "inspect",
         EventTable = {
-            { s = "ARC9_BOCW.knife_inspect", t = 0 },
+            { s = "ARC9_BOCW.Knife_inspect", t = 0 },
         },
     },
 }

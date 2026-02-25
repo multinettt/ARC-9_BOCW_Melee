@@ -55,13 +55,6 @@ sound.Add({ -- BLACK OPS COLD WAR
 })
 
 sound.Add({
-    name = "ARC9_BOCW.Knife_swing",
-    channel = CHAN_AUTO,
-    volume = 1.0,
-    sound = {"weapons/arc9/bocw_knife/knife_swing1.wav", "weapons/arc9/bocw_knife/knife_swing2.wav", "weapons/arc9/bocw_knife/knife_swing3.wav", "weapons/arc9/bocw_knife/knife_swing4.wav"}
-})
-
-sound.Add({
     name = "ARC9_BOCW.Knife_stab",
     channel = CHAN_AUTO,
     volume = 1.0,
